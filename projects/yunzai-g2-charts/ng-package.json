@@ -3,5 +3,6 @@
   "dest": "../../dist/yunzai-g2-charts",
   "lib": {
     "entryFile": "src/public-api.ts"
-  }
+  },
+  "whitelistedNonPeerDependencies": ["tslib", "@angular/cdk"]
 }

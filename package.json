@@ -19,9 +19,6 @@
     "pre": "rm -rf ./dist && ng build yunzai-g2-charts --prod && yarn build:schema  && yarn copy:schema"
   },
   "private": true,
-  "peerDependencies": {
-    "@angular/cdk": "^10.2.4"
-  },
   "dependencies": {
     "@angular-devkit/build-angular": "~0.1001.1",
     "@angular-devkit/build-ng-packagr": "~0.1000.3",

@@ -13,9 +13,11 @@
     },
     "url": {
       "type": "string",
-      "description": "the server url."
+      "default": "https://www.baidu.com",
+      "description": "the server url.",
+      "x-prompt": "阿里咕噜囧油嘿???"
     }
   },
-  "required": ["url"],
+  "required": [],
   "additionalProperties": false
 }

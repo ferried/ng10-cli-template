@@ -2,7 +2,7 @@
  * @Author: ferried
  * @Email: harlancui@outlook.com
  * @Date: 2020-12-09 14:31:03
- * @LastEditTime: 2020-12-09 17:02:23
+ * @LastEditTime: 2020-12-09 17:40:35
  * @LastEditors: ferried
  * @Description: Basic description
  * @FilePath: /ng10-cli-template/projects/yunzai-g2-charts/src/schematics/ng-add/index.ts
@@ -40,7 +40,8 @@ const main = (options: { url: string, project: string }): Rule => {
 const updatePackageJSON = (): Rule => {
     return (tree: Tree) => {
         const deps: NodeDependency[] = [
-            { type: NodeDependencyType.Default, version: '0.0.3', name: 'yunzai-g2-charts' }
+            { type: NodeDependencyType.Default, version: '4.1.1', name: '@antv/g2' },
+            { type: NodeDependencyType.Default, version: '0.0.11', name: 'yunzai-g2-charts' }
         ]
         deps.forEach((d) => {
             addPackageJsonDependency(tree, d)
@@ -64,8 +65,7 @@ const removeOriginalFiles = (): Rule => {
         [
             `${project.sourceRoot}/environments/environment.prod.ts`,
             `${project.sourceRoot}/environments/environment.ts`,
-            `${project.sourceRoot}/assets`,
-            `${project.sourceRoot}/index.html`,
+            `${project.sourceRoot}/assets/.gitkeep`,
             `${project.sourceRoot}/app/app.module.ts`,
             `${project.sourceRoot}/app/app.component.ts`,
             `${project.sourceRoot}/app/app.component.spec.ts`,
