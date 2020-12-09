@@ -1,28 +1,8 @@
 {
-  "devDependencies": {
-    "@angular-devkit/build-angular": "~0.1001.7",
-    "@angular/compiler-cli": "~10.1.6",
-    "ng-packagr": "^10.1.0",
-    "typescript": "~4.0.2"
-  },
-  "name": "ng10-cli-template",
-  "version": "0.0.0",
-  "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "test": "ng test",
-    "lint": "ng lint",
-    "e2e": "ng e2e",
-    "build:schema": "tsc -p ./projects/yunzai-g2-charts/src/schematics/tsconfig.json",
-    "copy:schema": "cp -rf ./projects/yunzai-g2-charts/src/schematics ./dist/yunzai-g2-charts",
-    "pre": "rm -rf ./dist && ng build yunzai-g2-charts --prod && yarn build:schema  && yarn copy:schema"
-  },
-  "private": true,
+  "name": "yunzai-g2-charts",
+  "version": "0.0.3",
+  "schematics": "./schematics/collection.json",
   "peerDependencies": {
-    "@angular/cdk": "^10.2.4"
-  },
-  "dependencies": {
     "@angular-devkit/build-angular": "~0.1001.1",
     "@angular-devkit/build-ng-packagr": "~0.1000.3",
     "@angular-devkit/core": "^10.0.3",
@@ -58,9 +38,11 @@
     "protractor": "~7.0.0",
     "rxjs": "~6.6.0",
     "ts-node": "~8.3.0",
-    "tslib": "^2.0.0",
     "tslint": "~6.1.0",
     "typescript": "~4.0.2",
     "zone.js": "~0.11.1"
+  },
+  "dependencies": {
+    "tslib": "^2.0.0"
   }
 }
